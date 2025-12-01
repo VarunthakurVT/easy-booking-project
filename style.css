@@ -696,11 +696,7 @@
 
 /* Green Theme Login Page */
 /* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 .loginpage{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -728,7 +724,7 @@
     box-shadow: 0 20px 60px rgba(27, 94, 32, 0.4);
     backdrop-filter: blur(10px);
     width: 100%;
-    animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.8s ease;
     border: 2px solid rgba(46, 125, 50, 0.3);
 }
 
@@ -750,7 +746,7 @@
 
 .form-header h1 {
     font-size: 32px;
-    color: #1b5e20;
+    color: #2e7d32;
     margin-bottom: 8px;
     font-weight: 700;
 }
@@ -876,7 +872,7 @@
     transition: all 0.3s ease;
 }
 
-.btn-primary {
+.btn {
     background: linear-gradient(135deg, #2e7d32, #4caf50);
     color: white;
     margin-bottom: 20px;
@@ -884,10 +880,11 @@
     justify-content: center ;
 }
 
-.btn-primary:hover {
+.btn:hover {
     background: linear-gradient(135deg, #1b5e20, #2e7d32);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(46, 125, 50, 0.4);
+    color:#4caf50;
 }
 
 .btn-primary:active {
@@ -953,6 +950,7 @@
 }
 
 .btn-google:hover {
+  
     border-color: #ea4335;
 }
 
@@ -962,20 +960,20 @@
 
 .switch-form {
     text-align: center;
-    color: #66bb6a;
+    color: black;
     font-size: 14px;
     margin-top: 20px;
 }
 
 .switch-form a {
-    color: #2e7d32;
+    color: #235c25;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .switch-form a:hover {
-    color: #1b5e20;
+    color: #33a83b;
     text-decoration: underline;
 }
 
