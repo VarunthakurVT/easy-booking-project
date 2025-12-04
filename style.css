@@ -1473,7 +1473,6 @@ li a.flght:active {
 
 .mainnavstickey {
   position: absolute;
-
   top: 185px;
   left: 0;
   height: 60px;
@@ -1488,12 +1487,9 @@ li a.flght:active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  transition: all 0.3s ease;
+   transition: all 0.3s ease;
 }
-
 .mainnavstickey ul {
-  animation: navanimationulq ease-in forwards;
   animation: navanimationulq 1s ease-in forwards;
   animation-range: entry 0% exit 100%;
   transform-origin: top center;
