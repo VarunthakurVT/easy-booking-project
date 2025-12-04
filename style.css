@@ -45,6 +45,11 @@
   display: block;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .index-hero-section::before {
   content: "";
   position: absolute;
@@ -1194,14 +1199,27 @@
 .mainheader {
   position: relative;
   z-index: 20;
-
-  margin: 0;
-  max-width: 752;
+  margin: 0 auto;
+  width: 100%;
+  max-width: min(1200px, 100%);
   display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   align-items: center;
-  justify-content: center;
   justify-content: space-between;
-  padding: 24px;
+  padding: 24px 32px;
+  box-sizing: border-box;
+}
+
+.loginorsignup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+  margin-left: auto;
 }
 .login-button {
   display: inline-block;
@@ -1717,6 +1735,396 @@ li a.flght:active {
 }
 .navhotel ul {
   z-index: 99999999;
+}
+/* responsive of nav bar */
+.loginorsignup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+  margin-left: auto;
+}
+
+.login-button {
+  display: inline-block;
+  z-index: 90;
+  margin-left: 20px;
+  height: 45px;
+  min-width: 100px;
+  padding: 0 15px;
+  background-color: #0066cc;
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.signup-button {
+  display: inline-block;
+  z-index: 90;
+  margin-left: 10px;
+  height: 45px;
+  min-width: 103px;
+  padding: 0 15px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ff6b35;
+  border: none;
+  color: white;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0052a3;
+  transform: translateY(-2px);
+}
+
+.signup-button:hover {
+  background-color: #e55a25;
+  transform: translateY(-2px);
+}
+
+.text-up,
+.text-down {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  white-space: nowrap;
+}
+
+.text-down {
+  top: 100%;
+  opacity: 0;
+}
+
+.login-button:hover .text-up {
+  transform: translate(-50%, -150%);
+  opacity: 0;
+}
+
+.login-button:hover .text-down {
+  transform: translate(-50%, -110%);
+  opacity: 1;
+}
+
+.signup-button:hover .text-up {
+  transform: translate(-50%, -150%);
+  opacity: 0;
+}
+
+.signup-button:hover .text-down {
+  transform: translate(-50%, -80%);
+  opacity: 1;
+}
+
+/* Responsive Design for Buttons */
+@media (max-width: 768px) {
+  .loginorsignup {
+    max-width: 100%;
+    gap: 8px;
+  }
+
+  .login-button {
+    margin-left: 10px;
+    height: 40px;
+    min-width: 90px;
+    font-size: 14px;
+    padding: 0 12px;
+  }
+
+  .signup-button {
+    margin-left: 8px;
+    height: 40px;
+    min-width: 90px;
+    font-size: 14px;
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .loginorsignup {
+    gap: 6px;
+  }
+
+  .login-button {
+    margin-left: 5px;
+    height: 38px;
+    min-width: 75px;
+    font-size: 13px;
+    padding: 0 10px;
+  }
+
+  .signup-button {
+    margin-left: 5px;
+    height: 38px;
+    min-width: 75px;
+    font-size: 13px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .loginorsignup {
+    gap: 4px;
+  }
+
+  .login-button {
+    margin-left: 0;
+    height: 36px;
+    min-width: 65px;
+    font-size: 12px;
+    padding: 0 8px;
+  }
+
+  .signup-button {
+    margin-left: 4px;
+    height: 36px;
+    min-width: 65px;
+    font-size: 12px;
+    padding: 0 8px;
+  }
+}
+
+/* Responsive scaling for nav (keep same proportions, just smaller) */
+@media (max-width: 900px) {
+  .mainnav,
+  .mainnavstickey,
+  .navstickey,
+  .navstickeybus,
+  .navstickeytaxi,
+  .navstickeytrain,
+  .navstidkeyplane,
+  .navhotel {
+    transform: scale(0.8);
+    transform-origin: top center;
+  }
+
+  .mainnav li,
+  .mainnavstickey li,
+  .navstickey li,
+  .navstickeybus li,
+  .navstickeytaxi li,
+  .navstickeytrain li,
+  .navstidkeyplane li,
+  .navhotel li {
+    width: 130px;
+  }
+
+  .mainnav a,
+  .mainnavstickey a,
+  .navstickey a,
+  .navstickeybus a,
+  .navstickeytaxi a,
+  .navstickeytrain a,
+  .navstidkeyplane a,
+  .navhotel a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 443px) {
+  .mainnav,
+  .mainnavstickey,
+  .navstickey,
+  .navstickeybus,
+  .navstickeytaxi,
+  .navstickeytrain,
+  .navstidkeyplane,
+  .navhotel {
+    transform: scale(0.6);
+    transform-origin: top center;
+  }
+
+  .mainnav li,
+  .mainnavstickey li,
+  .navstickey li,
+  .navstickeybus li,
+  .navstickeytaxi li,
+  .navstickeytrain li,
+  .navstidkeyplane li,
+  .navhotel li {
+    width: 100px;
+  }
+
+  .mainnav a,
+  .mainnavstickey a,
+  .navstickey a,
+  .navstickeybus a,
+  .navstickeytaxi a,
+  .navstickeytrain a,
+  .navstidkeyplane a,
+  .navhotel a {
+    font-size: 11px;
+  }
+
+  .mainnav img,
+  .mainnavstickey img,
+  .navstickey img,
+  .navstickeybus img,
+  .navstickeytaxi img,
+  .navstickeytrain img,
+  .navstidkeyplane img,
+  .navhotel img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .headerbackground {
+    height: auto;
+    padding-bottom: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .index-hero-section {
+    padding: 48px 16px;
+    min-height: auto;
+  }
+
+  .index-hero-title {
+    font-size: clamp(2.4rem, 7vw, 3rem);
+  }
+
+  .index-search-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .index-search-input,
+  .index-search-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainheader {
+    padding: 20px;
+  }
+
+  .loginorsignup {
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+
+  .plane-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .plane-nav {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .plane-nav a {
+    flex: 1 1 140px;
+    text-align: center;
+  }
+
+  .plane-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .index-services-grid,
+  .index-features-grid,
+  .index-testimonials-container {
+    grid-template-columns: 1fr;
+  }
+
+  .index-service-card,
+  .index-feature-item,
+  .index-testimonial-card {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mapouter,
+  .gmap_canvas {
+    height: 320px;
+  }
+
+  .gmap_iframe {
+    height: 320px !important;
+  }
+
+  .bus-booking-header,
+  .bus-booking-search-section,
+  .bus-booking-govt-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .bus-booking-search-form {
+    padding: 1.5rem;
+  }
+
+  .taxi-booking-container,
+  .hotelbookingsystem-search-card,
+  .hotelbookingsystem-booking-form-card,
+  .plane-search-card {
+    padding: 24px 16px;
+  }
+
+  .hotelbookingsystem-nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hotelbookingsystem-nav-link {
+    flex: 1 1 120px;
+    text-align: center;
+  }
+
+  .hotelbookingsystem-section {
+    padding: 40px 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .loginorsignup {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .login-button,
+  .signup-button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .index-hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .login-button,
+  .signup-button {
+    height: 30px;
+    font-size: 10px;
+  }
 }
 .navstickey li,
 .navstickeybus li,
