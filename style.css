@@ -1272,6 +1272,7 @@ TESTIMONIALS SECTION
 
 .loginorsignup {
   display: flex;
+  
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
@@ -1318,16 +1319,15 @@ TESTIMONIALS SECTION
   left: 50%;
   top: 50%;
 
-  /* height:20px; */
 
-  transform: translate(-10%, -150%);
+  transform: translate(-30%, -150%);
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .text-down {
   top: 100%; /* Place below view */
   opacity: 0;
-  /* padding-bottom: 20%; */
+ 
   font-size: small;
 }
 
@@ -1337,8 +1337,10 @@ TESTIMONIALS SECTION
 }
 
 .login-button:hover .text-down {
-  transform: translate(-50%, -110%); /* Slide to center */
+  transform: translate(-50%, -60%); /* Slide to center */
   opacity: 1;
+  text-align: center;
+  
 }
 
 .signup-button {
@@ -1350,32 +1352,33 @@ TESTIMONIALS SECTION
   border-radius: 100px;
 
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16px;
+  
+  
 }
 
 .text-up,
 .text-down {
   position: absolute;
   left: 50%;
-  top: 65%;
-  height: 40px;
-  transform: translate(-50%, -50%);
+
+  top: 45%;
+  height: 35px;
+  transform: translate(-70%, -50%);
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-.text-down {
-  top: 100%; /* Place below view */
-  opacity: 0;
-}
+
 
 .signup-button:hover .text-up {
   transform: translate(-50%, -150%); /* Slide up */
   opacity: 0;
-}
+  }
 
-.signup-button:hover .text-down {
+.signup-button:hover .text-down  {
   transform: translate(-50%, -80%); /* Slide to center */
   opacity: 1;
+  
 }
 /* this is whole is nav */
 
@@ -1518,6 +1521,7 @@ li a.flght:active {
 
 @keyframes navanimationul {
   0% {
+    
     transform: scaleX(1) scaleY(1) translateY(0%);
     opacity: 1;
   }
@@ -2289,13 +2293,16 @@ li a.flght:active {
 @keyframes opacity {
   0% {
     opacity: 0;
+    dispaly:none;
   }
 
   10% {
     opacity: 0;
+     dispaly:none;
   }
   11% {
     opacity: 0;
+     dispaly:none;
   }
 
   12%,
