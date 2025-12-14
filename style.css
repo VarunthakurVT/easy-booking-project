@@ -4,6 +4,9 @@
    ============================================
    ============================================
     */
+    .body{
+    overflow:hidden;
+    }
 
 .index-hero-section {
   position: relative;
@@ -1408,6 +1411,7 @@ TESTIMONIALS SECTION
   align-items: center;
   justify-content: center;
 
+
   transition: all 0.3s ease;
 }
 
@@ -1813,6 +1817,7 @@ li a.flght:active {
 
 .login-button {
   display: inline-block;
+  text-align: center;
   z-index: 90;
   margin-left: 20px;
   height: 45px;
@@ -1845,11 +1850,13 @@ li a.flght:active {
   cursor: pointer;
   font-size: 15px;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .login-button:hover {
   background-color: #0052a3;
   transform: translateY(-2px);
+ 
 }
 
 .signup-button:hover {
